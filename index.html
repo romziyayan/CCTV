@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Live CCTV Sleman</title>
+		<link rel="icon" type="image/svg+xml" href="icon.svg">
+		<!-- Video.js CSS -->
+		<link href="https://vjs.zencdn.net/8.23.4/video-js.css" rel="stylesheet" />
+		<link href="cctv.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<header>Live CCTV Sleman</header>
+		<div class="grid">
+			<!-- Ambarukmo Plaza Timur -->
+			<div class="video-container">
+				<video
+					id="cctv-ambarukmo-timur"
+					class="video-js vjs-default-skin vjs-live vjs-liveui"
+					controls
+					preload="none"
+					muted
+					poster="poster.svg"
+					>
+					<source src="https://mam.jogjaprov.go.id:1937/cctv-kominfosleman/AmbarukmoPlazaTimur.stream/chunklist_w1963310957.m3u8" type="application/x-mpegURL" />
+				</video>
+				<div class="location-name">Ambarukmo Plaza Timur</div>
+			</div>
+			<!-- Ambarukmo Plaza Barat -->
+			<div class="video-container">
+				<video
+					id="cctv-ambarukmo-barat"
+					class="video-js vjs-default-skin vjs-live vjs-liveui"
+					controls
+					preload="none"
+					muted
+					poster="poster.svg"
+					>
+					<source src="https://mam.jogjaprov.go.id:1937/cctv-kominfosleman/AmbarukmoPlazaBarat.stream/chunklist_w654250963.m3u8" type="application/x-mpegURL" />
+				</video>
+				<div class="location-name">Ambarukmo Plaza Barat</div>
+			</div>
+			<!-- Exit Tol Kalasan -->
+			<div class="video-container">
+				<video
+					id="cctv-exit-tol-kalasan"
+					class="video-js vjs-default-skin vjs-live vjs-liveui"
+					controls
+					preload="none"
+					muted
+					poster="poster.svg"
+					>
+					<source src="https://ant.slemankab.go.id/CCTVLUARPEMDA/streams/319189700359231946646920.m3u8" type="application/x-mpegURL" />
+				</video>
+				<div class="location-name">Exit Tol Kalasan</div>
+			</div>
+			<!-- Proliman Bogem 1 -->
+			<div class="video-container">
+				<video
+					id="cctv-proliman-bogem-1"
+					class="video-js vjs-default-skin vjs-live vjs-liveui"
+					controls
+					preload="none"
+					muted
+					poster="poster.svg"
+					>
+					<source src="https://ant.slemankab.go.id/CCTVLUARPEMDA/streams/141890874016002714329353.m3u8" type="application/x-mpegURL" />
+				</video>
+				<div class="location-name">Proliman Bogem 1</div>
+			</div>
+			<!-- Proliman Bogem 2 -->
+			<div class="video-container">
+				<video
+					id="cctv-proliman-bogem-2"
+					class="video-js vjs-default-skin vjs-live vjs-liveui"
+					controls
+					preload="none"
+					muted
+					poster="poster.svg"
+					>
+					<source src="https://ant.slemankab.go.id/CCTVLUARPEMDA/streams/786891936004372941299462.m3u8" type="application/x-mpegURL" />
+				</video>
+				<div class="location-name">Proliman Bogem 2</div>
+			</div>
+			<!-- Utara Teteg -->
+			<div class="video-container">
+				<video
+					id="cctv-utara-teteg"
+					class="video-js vjs-default-skin vjs-live vjs-liveui"
+					controls
+					preload="none"
+					muted
+					poster="poster.svg"
+					>
+					<source src="https://cctvjss.jogjakota.go.id/margo-utomo/Wisma-Ratih.stream/chunklist_w957373974.m3u8" type="application/x-mpegURL" />
+				</video>
+				<div class="location-name">Utara Teteg</div>
+			</div>
+		</div>
+		<footer>
+			<p>Romzi Yayan<br><a href="mailto:romziyayan@yahoo.co.id">romziyayan@yahoo.co.id</a></p>
+		</footer>
+		<!-- Video.js JS -->
+		<script src="https://vjs.zencdn.net/8.23.4/video.js"></script>
+		<script>
+			// Inisialisasi semua player
+			const players = [
+				videojs('cctv-ambarukmo-timur', { fluid: true, autoplay: false, muted: true, liveui: true, responsive: true}),
+				videojs('cctv-ambarukmo-barat', { fluid: true, autoplay: false, muted: true, liveui: true, responsive: true}),
+				videojs('cctv-exit-tol-kalasan', { fluid: true, autoplay: false, muted: true, liveui: true, responsive: true}),
+				videojs('cctv-proliman-bogem-1', { fluid: true, autoplay: false, muted: true, liveui: true, responsive: true}),
+				videojs('cctv-proliman-bogem-2', { fluid: true, autoplay: false, muted: true, liveui: true, responsive: true}),
+				videojs('cctv-utara-teteg', { fluid: true, autoplay: false, muted: true, liveui: true, responsive: true}),
+			];
+		</script>
+	</body>
+</html>
