@@ -1,0 +1,84 @@
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg-color: #111;
+		--text-color: #fff;
+		--head-color: #222;
+		--border-color: #333;
+		--video-color: #000;
+		--card-bg: #000;
+	}
+}
+@media (prefers-color-scheme: light) {
+	:root {
+		--bg-color: #eee;
+		--text-color: #000;
+		--head-color: #ddd;
+		--border-color: #ccc;
+		--video-color: #fff;
+		--card-bg: #fff;
+	}
+}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+body {
+	font-family: "Noto Sans", sans-serif;
+	background-color: var(--bg-color);
+	color: var(--text-color);
+	margin: 0;
+	padding: 0;
+}
+header {
+	font-family: "Noto Sans Display", sans-serif;
+	text-align: center;
+	background: var(--head-color);
+	padding: 0.5em 0;
+	font-size: 2em;
+	font-weight: bold;
+	letter-spacing: 1px;
+	border-bottom: 2px solid var(--border-color);
+}
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	gap: 10px;
+	padding: 10px;
+}
+.video-container {
+	position: relative;
+	width: 100%;
+	aspect-ratio: 16 / 9;
+	background: var(--video-color);
+	border-radius: 8px;
+	overflow: hidden;
+}
+.location-name {
+	position: absolute;
+	top: 5px;
+	right: 10px;
+	background: rgba(0, 0, 0, 0.75);
+	color: white;
+	padding: 5px 8px;
+	font-size: 0.75em;
+	border-radius: 4px;
+}
+video {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.vjs-fullscreen video {
+	object-fit: contain !important;
+	width: 100vw !important;
+	height: 100vh !important;
+	background-color: #000; /* biar tetap hitam di sisi kosong */
+}
+.vjs-fullscreen .location-name {
+	display: none;
+}
+footer {
+    font-family: "Noto Sans Display", sans-serif;
+	text-align: center;
+	background: var(--head-color);
+	padding: 0.5em 0;
+	letter-spacing: 1px;
+    border-top: 2px solid var(--border-color);
+}
