@@ -40,6 +40,20 @@
 				</video>
 				<div class="location-name">Ambarukmo Plaza Barat</div>
 			</div>
+			<!-- Prambanan TC -->
+			<div class="video-container">
+				<video
+					id="cctv-prambanan-tc"
+					class="video-js vjs-default-skin vjs-live vjs-liveui"
+					controls
+					preload="none"
+					muted
+					poster="poster.svg"
+					>
+					<source src="https://mam.jogjaprov.go.id:1937/atcs/Prambanan_TC.stream/chunklist_w1703672881.m3u8" type="application/x-mpegURL" />
+				</video>
+				<div class="location-name">Prambanan TC</div>
+			</div>
 			<!-- Proliman Bogem 1 -->
 			<div class="video-container">
 				<video
@@ -82,6 +96,20 @@
 				</video>
 				<div class="location-name">Utara Teteg</div>
 			</div>
+			<!-- Jalan Yos Sudarso -->
+			<div class="video-container">
+				<video
+					id="cctv-yos-sudarso"
+					class="video-js vjs-default-skin vjs-live vjs-liveui"
+					controls
+					preload="none"
+					muted
+					poster="poster.svg"
+					>
+					<source src="https://mam.jogjaprov.go.id:1937/atcs-kota/YosSudarso.stream/chunklist_w599301616.m3u8" type="application/x-mpegURL" />
+				</video>
+				<div class="location-name">Jalan Yos Sudarso</div>
+			</div>
 		</div>
 		<footer>
 			<p>Romzi Yayan<br><a href="mailto:romziyayan@yahoo.co.id">romziyayan@yahoo.co.id</a></p>
@@ -93,9 +121,11 @@
 			const players = [
 				videojs('cctv-ambarukmo-timur', { fluid: true, autoplay: false, muted: true, liveui: true, responsive: true}),
 				videojs('cctv-ambarukmo-barat', { fluid: true, autoplay: false, muted: true, liveui: true, responsive: true}),
+				videojs('cctv-prambanan-tc', { fluid: true, autoplay: false, muted: true, liveui: true, responsive: true}),
 				videojs('cctv-proliman-bogem-1', { fluid: true, autoplay: false, muted: true, liveui: true, responsive: true}),
 				videojs('cctv-proliman-bogem-2', { fluid: true, autoplay: false, muted: true, liveui: true, responsive: true}),
 				videojs('cctv-utara-teteg', { fluid: true, autoplay: false, muted: true, liveui: true, responsive: true}),
+				videojs('cctv-yos-sudarso', { fluid: true, autoplay: false, muted: true, liveui: true, responsive: true}),
 			];
 		</script>
 	</body>
